@@ -1,13 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html
+  lang="en"
+  class="game"
+>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami</title>
-    <link rel="stylesheet" href="./styles/main.scss">
-    <script src="scripts/main.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>2048</title>
+    <link
+      rel="stylesheet"
+      href="./styles/main.scss"
+    />
+    <link
+      rel="icon"
+      href="../src/images/faviconSimple.svg"
+      type="image/svg+xml"
+      sizes="any"
+    />
   </head>
-  <body>
-    <h1>Landing Page</h1>
+  <body class="game__body">
+    <div class="container">
+      <header class="game__header">
+        <h1 class="game__title">2048</h1>
+        <div class="game__controls">
+          <p class="game__info">
+            Score:
+            <span class="game__score">0</span>
+          </p>
+          <button class="game__button game__button--start">Start</button>
+        </div>
+      </header>
+
+      <main class="game__field"></main>
+
+      <footer class="game__messages">
+        <p class="game__message game__message--lose game__message--hidden">
+          You lose! Restart the game?
+        </p>
+        <p class="game__message game__message--win game__message--hidden">
+          Winner! Congrats! You did it!
+        </p>
+        <p class="game__message game__message--start">
+          Press "Start" to begin game. Good luck!
+        </p>
+      </footer>
+    </div>
+    <script
+      src="scripts/main.js"
+      type="module"
+    ></script>
   </body>
 </html>
